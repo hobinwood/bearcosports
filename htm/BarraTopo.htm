@@ -1,0 +1,224 @@
+<!-- Includes CSS -->
+<link rel="stylesheet" href=https://loja-30855.lojavirtualfc.com.br/lojas/00030855/htm/css/wave.css?1.0">
+<link rel="stylesheet" href="<BaseLoja>htm/Colors.css">
+<link rel="stylesheet" href="<BaseLoja>htm/css/jquery_ui.css">
+
+<!--[if IE]>
+<style type="text/css">.ui-autocomplete-category{margin-top: -2px}</style>
+<![endif]-->
+
+<!-- Includes Javascript -->
+
+<script src="<BaseLoja>htm/JurosParcelas.js"></script>
+<script src="<BaseLoja>htm/LojaLib.js"></script>
+<script src="/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="<BaseLoja>htm/js/autosuggestTbar.js"></script>
+<script src="<BaseLoja>htm/js/autosuggest.js"></script>
+<script src="<BaseLoja>htm/js/ScrollToTheTop.js"></script>
+<script src="<BaseLoja>htm/js/TinyNav.js"></script>
+<script>
+  iItensCesta=<QtdCesta>;
+</script>
+
+<!-- Begin: Toolbar -->
+<div class="FCToolBar">
+  <div class="FCToolBarContainer">
+    <a href="<StoreDomain>"><div class="FCToolBarLogo"><img alt="<NomeLoja>" src="<BaseLoja>images/LogoTopo.png"></div></a>
+    <a href="/categorias.asp?idloja=<IDLojaNum>" class="HeaderMenuToolbarFC"><span class="HeaderMenuULIconFC HeaderMenuCatDepFC"><img64 src="<BaseLoja>images/IconCat.svg" plain="true" width="18" height="18"></span> <Categorias></a>
+      <form name="TopSearchToolbarForm" id="autocomplete-form-toolbar" class="FCToolBarForm" method="GET" action="/listaProdutos.asp">
+          <input type="hidden" name="IDLoja" value="<IDLoja>">
+          <input type="hidden" name="Digitada" value="True">
+          <input type="text" id="autocomplete-toolbar" value="" name="Texto" class="InputTextBusca ui-autocomplete-input" placeholder="Digite sua busca aqui" autocomplete="off">
+          <a href="#search" onclick="sF$.fnSearchToolbarSubmit(document.TopSearchToolbarForm);" class="btn1 btn-sent FCToolBarButton barranew"><span class="HeaderSerachIMGIconFC"><img64 src="<BaseLoja>images/IconSearch.svg" plain="true" width="15" height="15" alt="Buscar" title="Buscar"></span></a>
+      </form>
+    <span class="FCToolBarChatTel">
+      <a href="#" style="float:left;" class=""><img width="15" height="15" src="../lojas/00030855/images/phone.png" style="opacity: 1;"></a>
+      <p><CompanyPhone></p>
+    </span>
+       <div class="HeaderCartMainFC ToolBarCart">
+          <a href="/addProduto.asp?idloja=<IDLojaNum>">
+            <div class="HeaderCartMainIconFC">
+              <img width="24" height="17" src="../lojas/00030855/images/carrinho.png" style="opacity: 1;">
+            </div>
+          </a>
+          <a href="/addProduto.asp?idloja=<IDLojaNum>">
+            
+           <div class="HeaderCartMainItemTotalFC">
+              <div id="HeaderCartItemFC"><span id="idCartItemsToolTop">0</span> item(s) <span id="idCartTotalToolTop">R$ 0,00</span></div>
+              <!--<div id="HeaderCartTotalFC"></div>-->
+            </div>
+          </a>
+      </div>
+  </div>
+</div>
+<script>
+var w = jQuery(window).width();
+if (w>1024){
+  ToolbarCartExec();
+};
+</script>
+<!-- End: Toolbar -->
+
+<!-- Begin: Logo - Menu - Search - Cart -->
+<div class="MainContainer">
+ <div class="loginInfo text-left"><script>sF$.fnLoginUserName("<NomeCliente>");</script></div> 
+ <div class="HeaderMenuOneFC hide-small">
+        <ul>
+          <li><a href="#" style="color:#fff!important">Bem-vindo - Bearco - Sua Loja virtual</a></li>
+          <li><a href="/cadastro.asp?idloja=<IDLojaNum>">Meu cadastro</a></li>
+          <li><a href="/track.asp?idloja=<IDLojaNum>">Meus pedidos</a></li>
+          <li><a href="/faleconosco.asp?idloja=<IDLojaNum>">Contato</a></li>
+          <li><a href="http://bearcosports.com/catalogo2017.pdf">Catálogo</a></li>
+          <li><a href="http://conteudo.eyecare.com.br/clube-bearco-2018">Clube Bearco</a></li>
+        </ul>
+      </div>
+
+  <div class="row FullSpaceFC">
+<!-- <div class="social">
+       <strong>Rede Social</strong><a href="https://www.instagram.com/bearcosports/" target="_blank" class="insta"></a><a href="https://www.facebook.com/bearcosports/?__mref=message_bubble" class="face" target="_blank"></a> 
+</div>--> 
+
+    <div style="float: left;" class="col-small-12 col-medium-3 col-large-3 col-xlarge-3 text-medium-left text-large-left text-xlarge-left">
+      <a href="<StoreDomain>"><img alt="<NomeLoja>" title="<NomeLoja>" src="<BaseLoja>images/LogoTopo.png" class="HeaderLogo"></a>
+    </div>
+    
+    
+     <div class="col-small-12 col-medium-6 col-large-6 col-xlarge-6" style="float: left;
+    clear: right; padding: 6px 0 6px 0">
+
+     <!-- modificado campo --!>
+
+      <!-- Begin Search -->
+      <form name="TopSearchForm" method="GET" id="autocomplete-form" action="/listaprodutos.asp" style="margin:10px -55px 0 0px; ">
+      <input type="hidden" name="idloja" value="<IDLojaNum>">
+      <input type="hidden" name="digitada" value="true">
+        <div class="HeaderSearchFC">
+          <div id="DivSearch" class="collapse">
+            <div class="col-small-10 col-medium-10 col-large-10 col-xlarge-10">
+              <input type="text" id="autocomplete" value="<SearchText>" name="Texto" class="InputTextBusca" placeholder="Digite sua busca aqui">
+             
+            </div>
+            <div class="col-small-2 col-medium-2 col-large-2 col-xlarge-2"><a href="#search" onclick="sF$.fnSearchSubmit(document.TopSearchForm);" class="btn1 btn-sent HeaderIconSearchButtonFC"><span class="HeaderSerachIMGIconFC"><img64 src="<BaseLoja>images/IconSearch.svg" plain="true" width="20" height="20" alt="Buscar" title="Buscar"></span></a></div>
+          </div>
+        </div>
+      </form>
+      <!-- End Search -->
+    </div>
+    <!-- Begin Cart -->
+<div class="col-small-12 col-medium-3 col-large-3 col-xlarge-3" style="max-width: 13%; clear: right;float: left; padding:31px 0 0 0">    
+<div class="text-contact"><i class="fa fa-phone"><img src="../lojas/00030855/images/phone.png" width="15" height="15" /></i>(11) 3062.7686</div></div>
+   <div class="col-small-12 col-medium-3 col-large-3 col-xlarge-3" style="max-width: 15%;
+    clear: right;
+    float: right;">
+      <div class="HeaderCartMainFC">
+        <a href="/addProduto.asp?idloja=<IDLojaNum>">
+          <div class="HeaderCartMainIconFC">
+            <img src="../lojas/00030855/images/carrinho.png" width="24" height="17" />
+          </div>
+        </a>
+        <a href="/addProduto.asp?idloja=<IDLojaNum>">
+          <div class="HeaderCartMainItemTotalFC">
+            <div id="HeaderCartItemFC"><span id="idCartItemsTop"></span> item(s) - <span id="idCartTotalTop"></span></div>
+            <!--<div id="HeaderCartTotalFC"></div>--> 
+          </div>
+        </a>
+        <script>FCLib$.onReady(function(){sF$.fnUpdateCart(false,false);});</script>
+      </div>
+    </div>
+    <!-- End Cart -->
+  </div> 
+</div>
+<!-- End: Logo - Menu - Search - Cart -->
+
+<!-- Begin Main Menu -->
+<div class="HeaderMainMenuFC">
+  <div class="MainContainer">
+    <div class="row collapse">
+      <div class="col-small-12 col-medium-12 col-large-12 col-xlarge-12">
+
+        <nav class="SmallMenuContainer">
+          <div class="SmallMenuButtom">
+            <span class="SmallMenuIcon"><img64 src="<BaseLoja>images/IconMMobile.svg" plain="true" width="18" height="18"></span>
+            <span>Menu</span>
+          </div>
+          
+          <!--<ul class="SmallMenuList HeaderMenuULFC">
+            <a href="<StoreDomain>"><li class="HeaderMenuHomeMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja>images/IconHome.svg" plain="true" width="18" height="18"></span> Home</li></a>
+            <a href="/categorias.asp?idloja=<IDLojaNum>"><li class="HeaderMenuHomeDepFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja>images/IconCat.svg" plain="true" width="18" height="18"></span> <Categorias></li></a>
+            <a href="/prod,idloja,<IDLojaNum>,promocao,1,ofertas.htm"><li class="HeaderMenuSaleMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja>images/IconSale.svg" plain="true" width="18" height="18"></span> Promoções</li></a>
+            <a href="/prod,idloja,<IDLojaNum>,lancamento,1,novidades.htm"><li class="HeaderMenuReleaseMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja>images/IconRelease.svg" plain="true" width="18" height="18"></span> Lançamentos</li></a>
+            <a href="/news,idloja,<IDLojaNum>"><li class="HeaderMenuNewsMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja>images/IconNews.svg" plain="true" width="18" height="18"></span> Notícias</li></a>
+            <a href="/ajuda.asp?idloja=<IDLojaNum>"><li class="HeaderMenuHelpMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja>images/IconHelp.svg" plain="true" width="18" height="18"></span> Ajuda</li></a>
+          </ul>-->
+
+
+  <ul  class="SmallMenuList HeaderMenuULFC">  
+         <a href="/prod,idloja,30855,idcategoria,249015,PROGENEX"><li class="HeaderMenuHomeMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja><!--images/IconHome.svg--!>" plain="true" width="18" height="18"></span> PROGENEX</li></a>
+ 
+          <a href="/prod,idloja,30855,idcategoria,249016,ROCKTAPE"><li class="HeaderMenuHomeDepFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja> <!--images/IconCat.svg--!>" plain="true" width="18" height="18"></span> <!--<Categorias>--!> ROCKTAPE</li></a>
+
+          <a href="/prod,idloja,30855,idcategoria,249017,BEARCO"><li class="HeaderMenuSaleMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja> <!--images/IconSale.svg--!>" plain="true" width="18" height="18"></span> BEARCO </li></a>
+          <a href="/prod,idloja,30855,idcategoria,251008,REEBOK""><li class="HeaderMenuReleaseMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja> <!--images/IconRelease.svg--!>" plain="true" width="18" height="18"></span> REEBOK </li></a>
+          <a href="/prod,idloja,30855,idcategoria,249018,CAFFEINE & KILOS"><li class="HeaderMenuNewsMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja> <!--images/IconNews.svg--!>" plain="true" width="18" height="18"></span> CAFFEINE & KILOS </li></a>
+          <a href="/prod,idloja,30855,idcategoria,249019,INVICTUS APPAREL"><li class="HeaderMenuHelpMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja> <!--images/IconHelp.svg--!>" plain="true" width="18" height="18"></span>  INVICTUS APPAREL</li></a>
+
+ <a href="/prod,idloja,30855,idcategoria,254197,RX"><li class="HeaderMenuHelpMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja> <!--images/IconHelp.svg--!>" plain="true" width="18" height="18"></span>RX SMART GEAR</li></a>
+<a href="/prod,idloja,30855,idcategoria,255554,EVENTOS"><li class="HeaderMenuHelpMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja> <!--images/IconHelp.svg--!>" plain="true" width="18" height="18"></span>  EVENTOS</li></a>  
+<a href="http://bearcosports.blogspot.com" target="_blank"><li class="HeaderMenuHelpMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja> <!--images/IconHelp.svg--!>" plain="true" width="18" height="18"></span>  BLOG</li></a>
+          <li style="margin: -31px 0 0 0;
+    float: right;"><div class="social">
+        <a href="https://www.instagram.com/bearcosports/" class="insta" target="_blank"></a><a href="https://www.facebook.com/bearcosports/?__mref=message_bubble" class="face" target="_blank"></a>
+     </div>
+
+        </ul>
+        </nav>
+
+        <ul class="HeaderMenuULFC smallMenuHide">  
+         <a href="/prod,idloja,30855,idcategoria,249015,PROGENEX"><li class="HeaderMenuHomeMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja><!--images/IconHome.svg--!>" plain="true" width="18" height="18"></span> PROGENEX</li></a>
+ 
+          <a href="/prod,idloja,30855,idcategoria,249016,ROCKTAPE"><li class="HeaderMenuHomeDepFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja> <!--images/IconCat.svg--!>" plain="true" width="18" height="18"></span> <!--<Categorias>--!> ROCKTAPE</li></a>
+
+          <a href="/prod,idloja,30855,idcategoria,249017,BEARCO"><li class="HeaderMenuSaleMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja> <!--images/IconSale.svg--!>" plain="true" width="18" height="18"></span> BEARCO </li></a>
+          <a href="/prod,idloja,30855,idcategoria,251008,REEBOK"><li class="HeaderMenuReleaseMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja> <!--images/IconRelease.svg--!>" plain="true" width="18" height="18"></span> REEBOK </li></a>
+          <a href="/prod,idloja,30855,idcategoria,249018,CAFFEINE & KILOS"><li class="HeaderMenuNewsMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja> <!--images/IconNews.svg--!>" plain="true" width="18" height="18"></span> CAFFEINE & KILOS </li></a>
+          <a href="/prod,idloja,30855,idcategoria,249019,INVICTUS APPAREL"><li class="HeaderMenuHelpMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja> <!--images/IconHelp.svg--!>" plain="true" width="18" height="18"></span>  INVICTUS APPAREL</li></a>
+ <a href="/prod,idloja,30855,idcategoria,254197,RX">
+<div class="dropdown">
+  <a class="dropbtn">RX SMART GEAR</a>
+  <div class="dropdown-content">
+    <a href="/prod,idloja,30855,idcategoria,254198,Corda Rápida 1.3 HYPER">Corda Rápida 1.3 HYPER</a>
+    <a href="/prod,idloja,30855,idcategoria,254199,Corda Lenta 3.4 BUFF">Corda Lenta 3.4 BUFF</a>
+    <a href="/prod,idloja,30855,idcategoria,254212,Manopola">Manopola</a>
+    <a href="/prod,idloja,30855,idcategoria,254213,OUTROS">OUTROS</a>
+  </div>
+</div>
+
+<!--<li class="HeaderMenuHelpMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja> images/IconHelp.svg>" plain="true" width="18" height="18"></span>RX</li></a>-->
+<a href="/prod,idloja,30855,idcategoria,255554,EVENTOS"><li class="HeaderMenuHelpMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja> <!--images/IconHelp.svg--!>" plain="true" width="18" height="18"></span>  EVENTOS</li></a>  
+<a href="http://bearcosports.blogspot.com" target="_blank"><li class="HeaderMenuHelpMobileFC"><span class="HeaderMenuULIconFC"><img64 src="<BaseLoja> <!--images/IconHelp.svg--!>" plain="true" width="18" height="18"></span>  BLOG</li></a>
+          <li style="margin: -31px 0 0 0;
+    float: right;"><div class="social">
+        <a href="https://www.instagram.com/bearcosports/" class="insta" target="_blank"></a><a href="https://www.facebook.com/bearcosports/?__mref=message_bubble" class="face" target="_blank"></a></a>
+     </div>
+
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Main Menu -->
+
+<!-- Receive Banner Home -->
+  <IncludeHTMLIn src="Banners.htm" in="home">
+<!-- End Banner Home -->
+
+<div class="FullSpaceFC"></div>
+
+<script>
+MobileMenuClick();
+</script>
+
+<!-- Begin Aside BarraEsquerda.htm - Close Rodape.htm - Don't remove -->
+<div class="MainContainer">
+  <div class="row">
